@@ -125,9 +125,8 @@ const GamePage = () => {
             animate="visible2"
             exit="exit"
             sx={{
-              width: "100%",
+              width: "95%",
               display: "flex",
-
               position: "fixed",
               top: 20,
               left: 0,
@@ -136,7 +135,7 @@ const GamePage = () => {
           >
             {winner === "draw" ? (
               <Typography
-                variant="h3"
+                variant="h4"
                 sx={{ marginLeft: 0.5, color: "#ffffff" }}
               >
                 It is a draw!
@@ -150,7 +149,7 @@ const GamePage = () => {
                   sx={{ fontSize: 50, marginLeft: 0.5, color: "#ffffff" }}
                 >
                   {winner}
-                </Typography>{" "}
+                </Typography>
                 wins!
               </Typography>
             )}
@@ -175,7 +174,7 @@ const GamePage = () => {
           key={a}
           sx={{
             display: "flex",
-            maxWidth: "auto",
+            width: "auto",
           }}
         >
           {row.map((cell, b) => (
@@ -183,8 +182,20 @@ const GamePage = () => {
               key={b}
               onClick={() => handleClick(a, b)}
               sx={{
-                width: "70px",
-                height: "70px",
+                width: {
+                  xs: "90px",
+                  sm: "120px",
+                  md: "150px",
+                  lg: "180px",
+                  xl: "200px",
+                },
+                height: {
+                  xs: "90px",
+                  sm: "120px",
+                  md: "150px",
+                  lg: "180px",
+                  xl: "200px",
+                },
                 // border: "1px solid black",
                 boxShadow: "1px 1px 5px #22222260",
                 margin: 0.5,
@@ -202,7 +213,11 @@ const GamePage = () => {
                 animate="visible"
                 whileHover="hover"
                 exit="exit"
-                sx={{ fontSize: 60, fontWeight: "bold", color: "#ffffff" }}
+                sx={{
+                  fontSize: { xs: 80, sm: 100, md: 120, lg: 150 },
+                  fontWeight: "bold",
+                  color: "#ffffff",
+                }}
               >
                 {cell}
               </Typography>

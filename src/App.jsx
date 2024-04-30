@@ -10,7 +10,9 @@ function App() {
         sx={{
           display: "flex",
           width: "100%",
-          height: "90vh",
+          height: "100vh",
+
+          // backgroundColor: "white",
           justifyContent: "center",
           alignItems: "center",
         }}
